@@ -2,16 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Color(0xff222222),
+        backgroundColor: const Color(0xff222222),
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -19,10 +21,10 @@ class MyApp extends StatelessWidget {
               CircleAvatar(
                 radius: 50,
                 backgroundColor: Colors.grey[300],
-                backgroundImage: AssetImage('images/profile.png'),
+                backgroundImage: const AssetImage('images/profile.png'),
               ),
               const SizedBox(height: 10),
-              Text(
+              const Text(
                 "Shayboniyshoh",
                 style: TextStyle(
                   fontFamily: 'Cutive Mono',
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
                   fontSize: 32,
                 ),
               ),
-              Text(
+              const Text(
                 "Flutter Developer",
                 style: TextStyle(
                   fontFamily: 'Source Sans Pro',
@@ -45,8 +47,8 @@ class MyApp extends StatelessWidget {
                 child: Divider(color: Colors.grey[700]),
               ),
               Card(
-                color: Color(0xff444444),
-                margin: EdgeInsets.symmetric(
+                color: const Color(0xff444444),
+                margin: const EdgeInsets.symmetric(
                   vertical: 10,
                   horizontal: 45,
                 ),
@@ -58,16 +60,16 @@ class MyApp extends StatelessWidget {
                       await launchUrl(launchUri);
                     }
                   },
-                  contentPadding: EdgeInsets.symmetric(
+                  contentPadding: const EdgeInsets.symmetric(
                     vertical: 7,
                     horizontal: 24,
                   ),
-                  leading: Icon(
+                  leading: const Icon(
                     Icons.phone,
                     size: 20,
                     color: Colors.white,
                   ),
-                  title: Text(
+                  title: const Text(
                     '+998 (90) 142-18-02',
                     style: TextStyle(
                       fontFamily: 'Source Sans Pro',
@@ -78,8 +80,8 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Card(
-                color: Color(0xff444444),
-                margin: EdgeInsets.symmetric(
+                color: const Color(0xff444444),
+                margin: const EdgeInsets.symmetric(
                   vertical: 10,
                   horizontal: 45,
                 ),
@@ -92,17 +94,17 @@ class MyApp extends StatelessWidget {
                       await launchUrl(launchUri);
                     }
                   },
-                  contentPadding: EdgeInsets.symmetric(
+                  contentPadding: const EdgeInsets.symmetric(
                     vertical: 7,
                     horizontal: 24,
                   ),
-                  leading: Icon(
+                  leading: const Icon(
                     Icons.email_outlined,
                     size: 20,
                     color: Colors.white,
                   ),
-                  title: Text(
-                    'Shayboniyshohabduvaliev@gmail.com',
+                  title: const Text(
+                    'Shayboniyshohabduvaliev',
                     style: TextStyle(
                       fontFamily: 'Source Sans Pro',
                       color: Colors.white,
